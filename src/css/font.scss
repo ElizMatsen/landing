@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import "src/css/color";
+
+$font-family_montserrat: 'Lato', sans-serif;
+
+@mixin font($font_size:1rem, $font_weight:400, $font_color: $primary_clr) {
+  font-size: $font_size;
+  font-family: $font-family_montserrat;
+  font-weight: $font_weight;
+  color: $font_color;
+}

@@ -1,0 +1,67 @@
+@import "color";
+@import "font";
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a {
+  display: inline-flex;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-size: 100%;
+  background: $main_bg;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+a,
+a:hover ,{
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
