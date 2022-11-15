@@ -29,20 +29,13 @@ a:active {
   outline: none;
 }
 
-nav,
-footer,
-header,
-aside {
-  display: block;
-}
-
 html,
 body {
   position: relative;
   height: 100%;
   width: 100%;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   font-size: 100%;
   background: $primary_clr;
 }
@@ -71,8 +64,39 @@ ul li {
   list-style: none;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $rgba_1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 30px;
+  border-radius: 4px;
+  background: $main_bg;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $main_bg;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: $main_bg;
+}
+
 @mixin transition {
   transition: all 0.2s ease;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .container {
@@ -84,6 +108,8 @@ ul li {
 
 header {
   display: flex;
+  position: fixed;
+  width: 100%;
   align-items: center;
   height: 100px;
   background: $primary_rgba;
@@ -94,7 +120,7 @@ header {
     justify-content: space-between;
 
     .header__logo {
-      max-width: 247px;
+      width: 247px;
       height: 35px;
 
       .header__logo-image {
@@ -148,7 +174,7 @@ header {
 
   .menu {
     display: flex;
-    position: absolute;
+    position: fixed;
     background: $main_bg;
     height: 100%;
     width: 100%;

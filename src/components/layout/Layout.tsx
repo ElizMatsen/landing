@@ -1,11 +1,15 @@
 import React from 'react';
 import Header from "../header/Header";
+import Business from "../business/Business";
 
 const Layout = () => {
 
     return (
         <>
-            <Header/>
+            <div className="wrapper">
+                <Header/>
+                <Business/>
+            </div>
         </>
     )
 };
