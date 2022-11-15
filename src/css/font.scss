@@ -3,9 +3,10 @@
 
 $font-family_montserrat: 'Lato', sans-serif;
 
-@mixin font($font_size:1rem, $font_weight:400, $font_color: $primary_clr) {
+@mixin font($font_size: 16px, $line-height: 16px, $font_weight:400, $font_color: $primary_clr) {
   font-size: $font_size;
   font-family: $font-family_montserrat;
   font-weight: $font_weight;
+  line-height: $line-height;
   color: $font_color;
 }
