@@ -44,7 +44,7 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-                <div className={classNames('burger', menu ? ' burger__active' : '')} onClick={openMenu}>
+                <div className={classNames('burger', menu ? ' burger_active' : '')} onClick={openMenu}>
                 <span className="burger__container">
                 </span>
                 </div>
