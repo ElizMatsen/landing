@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from "../header/Header";
 import Business from "../business/Business";
+import {Route, Routes} from 'react-router-dom';
 
 const Layout = () => {
 
@@ -8,7 +9,9 @@ const Layout = () => {
         <>
             <div className="wrapper">
                 <Header/>
-                <Business/>
+                <Routes>
+                    <Route path="business" element={<Business/>}/>
+                </Routes>
             </div>
         </>
     )
