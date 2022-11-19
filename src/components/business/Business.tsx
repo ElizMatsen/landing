@@ -10,7 +10,7 @@ const Business = () => {
                         <h1><span className="title_decoration">Lorem ipsum</span> dolor sit amet
                             consectetur <span className="title_decoration">adipiscing</span></h1>
                         <div className="business__body">
-                            <h3>At vero eos et accusamus et iusto odio dignissimos ducimus!</h3>
+                            <div className="business__title">At vero eos et accusamus et iusto odio dignissimos ducimus!</div>
                             <nav className="business__navigation">
                                 <ul className="business__list">
                                     <li className="business__item">
