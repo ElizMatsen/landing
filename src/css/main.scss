@@ -55,6 +55,157 @@ a:hover, {
   text-decoration: none;
 }
 
+.select {
+  height: 48px;
+  width: 100%;
+
+  .select__control {
+    height: 48px;
+    cursor: pointer;
+    background: $rgba_1;
+    border-color: $bg_1;
+    @include font(18px, 18px, 400, $primary_clr);
+
+    &:hover {
+      border-color: $bg_1;
+    }
+
+    .select__indicators {
+      .select__indicator-separator {
+        background: none;
+      }
+
+      .select__dropdown-indicator {
+        color: $bg;
+      }
+    }
+
+    .select__value-container {
+      justify-content: flex-start;
+      height: 48px;
+      grid-template-rows: 48px;
+      padding: 0 0 0 10px;
+
+      .select__placeholder {
+        color: $content_clr_1;
+      }
+    }
+  }
+
+  .select__control--is-focused.select__control--menu-is-open {
+    background: $rgba_2;
+    box-shadow: none;
+    border-color: transparent;
+    border-radius: 3px 3px 0 0;
+
+    .select__indicators {
+      .select__dropdown-indicator {
+        color: $bg_1;
+        transform: rotate(180deg);
+      }
+    }
+
+    .select__value-container {
+      .select__placeholder {
+        color: $primary_clr;
+      }
+
+      .select__single-value {
+        color: $primary_clr;
+      }
+    }
+
+    .select__control {
+      .select__indicators {
+
+        .select__dropdown-indicator {
+          color: $bg_1;
+        }
+      }
+    }
+  }
+
+  .select__menu {
+    border-radius: 0;
+    box-shadow: none;
+    background: $rgba_2;
+    margin: 0;
+  }
+}
+
+input {
+  cursor: pointer;
+  height: 48px;
+  width: 100%;
+  background: $rgba_1;
+  padding-left: 10px;
+  border: 1px solid $bg_1;
+  border-radius: 3px;
+  @include font(18px, 18px, 400, $content_clr_1);
+
+  &::placeholder {
+    opacity: 1;
+    color: $content_clr_1;
+  }
+
+  &:focus,
+  &:active {
+    background: $rgba_2;
+    color: $primary_clr;
+
+    &::placeholder {
+      color: $primary_clr;
+    }
+
+  }
+}
+
+.form__file {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  @include font(15px, 15px, 400, $content_clr_1);
+  cursor: pointer;
+  position: relative;
+  width: 370px;
+  height: 48px;
+  min-height: 48px;
+  background: $bg_1;
+  border: 2px solid $bg_2;
+  border-radius: 3px;
+
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+  }
+
+  input[type = 'file'] {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    opacity: 0;
+  }
+}
+
+.form__range {
+  .form__range-container {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      @include font(18px, 18px, 400, $primary_clr);
+    }
+
+    .form__range-title {
+      text-align: left;
+      margin-right: 5px;
+    }
+  }
+}
+
+
 img {
   max-width: 100%;
   max-height: 100%;
@@ -65,27 +216,26 @@ ul li {
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
-  height: 8px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: $rgba_1;
+  background-color: $bg_5;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
   height: 30px;
   border-radius: 4px;
-  background: $main_bg;
+  background: $content_clr_2;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: $main_bg;
+  background: $content_clr_2;
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: $main_bg;
+  background: $content_clr_2;
 }
 
 @mixin transition {
@@ -152,6 +302,15 @@ h2 {
 
   &:hover {
     transform: scale(1.02);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: no-drop;
+
+    &:hover {
+      transform: scale(1);
+    }
   }
 }
 
@@ -363,6 +522,44 @@ header {
   }
 }
 
+.form {
+  width: 100%;
+
+  .form_error {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 6px;
+
+    p {
+      @include font(16px, 16px, 400, $alarm_clr);
+    }
+  }
+
+  .form__row {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .form__input {
+      flex: 1;
+    }
+
+    .form__range {
+      flex: 2;
+    }
+  }
+
+  .button {
+    margin-top: 40px;
+  }
+}
+
 @media (max-width: 992px) {
   h1 {
     font-size: 40px;
@@ -513,6 +710,16 @@ header {
             }
           }
         }
+      }
+    }
+  }
+
+  .form {
+    .form__row {
+      flex-direction: column;
+
+      .form__input {
+        width: 100%;
       }
     }
   }
