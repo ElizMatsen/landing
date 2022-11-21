@@ -39,7 +39,7 @@ const Footer = () => {
                         </div>
                         <div className="footer__sub-item">
                             <img src={vk} alt="Вконтакте"/>
-                            <a href="mailto:info@ipsum228.com">info@ipsum228.com</a>
+                            <a href="https://vk.com" target="_blank">Мы вконтакте</a>
                         </div>
                     </div>
 
