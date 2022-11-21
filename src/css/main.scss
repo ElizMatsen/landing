@@ -660,12 +660,6 @@ header {
           margin-right: 0;
         }
 
-        .footer__sub-item_copyright {
-          p {
-            color: $primary_clr;
-          }
-        }
-
         a {
           color: $primary_clr;
         }
@@ -674,7 +668,11 @@ header {
           color: $content_clr_6;
         }
       }
-
+      .footer__sub-item_copyright {
+        p {
+          color: $primary_clr;
+        }
+      }
     }
   }
 }
