@@ -6,8 +6,8 @@ import mail from "../../assets/img/ic_mail.svg";
 import cash from "../../assets/img/ic_cash.svg";
 import file from "../../assets/img/ic_file.svg";
 import {useForm} from "react-hook-form";
-import {style} from "../../assets/formErrorStyle";
-import {selectStyles} from "../../assets/SelectStyles";
+import {style} from "../../formErrorStyle";
+import {selectStyles} from "../../SelectStyles";
 import Select from "react-select";
 
 const Business = () => {
