@@ -37,7 +37,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-size: 100%;
-  background: $primary_clr;
+  background: $main_bg;
 }
 
 html {
@@ -202,6 +202,10 @@ input {
       text-align: left;
       margin-right: 5px;
     }
+
+    .form__range-value {
+      white-space: nowrap;
+    }
   }
 
   input[type=range] {
@@ -365,7 +369,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  min-height: 100vh;
 }
 
 .container {
@@ -601,6 +605,74 @@ header {
   }
 }
 
+.footer {
+  background: $bg_5;
+
+  .footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+    @include font(13px, 20px, 400, $primary_clr);
+
+    .footer__item {
+      position: relative;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      &:after {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: calc(50% - 9px);
+        width: 1px;
+        height: 18px;
+        background: $bg_8;
+      }
+
+      &:first-child {
+        padding: 0 40px 0 0;
+      }
+
+      &:last-child {
+        padding: 0 0 0 35px;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+
+      .footer__sub-item {
+        display: flex;
+        align-items: center;
+        margin-right: 38px;
+        padding: 5px 0;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          color: $primary_clr;
+        }
+
+        p {
+          color: $content_clr_6;
+        }
+      }
+
+    }
+  }
+}
+
 @media (max-width: 992px) {
   h1 {
     font-size: 40px;
@@ -724,6 +796,28 @@ header {
   }
   .ordering {
     padding: 100px 0 120px 0;
+  }
+  .footer {
+    .footer__container {
+      padding: 15px 0;
+      flex-direction: column;
+
+      .footer__item {
+        padding: 5px 0 0 0;
+
+        &:after {
+          display: none;
+        }
+
+        &:first-child {
+          padding: 0;
+        }
+
+        &:last-child {
+          padding: 5px 0 0 0;
+        }
+      }
+    }
   }
 }
 
