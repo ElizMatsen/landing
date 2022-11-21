@@ -12,8 +12,8 @@ const Footer = () => {
             <div className="container">
                 <div className="footer__container">
                     <div className="footer__item">
-                        <div className="footer__sub-item">
-                            <p> &#169; 2018 «LoremIpsum.net» Все права защищены.</p>
+                        <div className="footer__sub-item footer__sub-item_copyright">
+                            <p> &#169; 2018 «LOREMIPSUM.NET» Все права защищены.</p>
                         </div>
                     </div>
 

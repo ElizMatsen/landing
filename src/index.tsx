@@ -1,9 +1,8 @@
-import React, {Suspense} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import '../src/css/main.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Loader from "./components/loader/Loader";
 import {BrowserRouter} from "react-router-dom";
 
 const root = ReactDOM.createRoot(
@@ -11,11 +10,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
     <React.StrictMode>
-        <Suspense fallback={<Loader/>}>
-            <BrowserRouter>
-                <App/>
-            </BrowserRouter>
-        </Suspense>
+        <BrowserRouter>
+            <App/>
+        </BrowserRouter>
     </React.StrictMode>
 );
 reportWebVitals();
