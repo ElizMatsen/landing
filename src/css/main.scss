@@ -187,6 +187,13 @@ input {
     height: inherit;
     opacity: 0;
   }
+
+  .form__file-title {
+    text-overflow: ellipsis;
+    max-width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 }
 
 .form__range {
@@ -292,7 +299,6 @@ ul li {
   top: 0;
   left: 0;
   content: '';
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -444,6 +450,7 @@ header {
 .main {
   position: relative;
   z-index: 1;
+  background: $bg_1;
 
   &:before {
     background-image: url("../assets/img/main-img.png");
@@ -668,6 +675,7 @@ header {
           color: $content_clr_6;
         }
       }
+
       .footer__sub-item_copyright {
         p {
           color: $primary_clr;
@@ -893,6 +901,16 @@ header {
             margin-bottom: 0;
           }
         }
+      }
+    }
+  }
+  .footer {
+
+    .footer__container {
+
+      .footer__item {
+        justify-content: flex-start;
+        width: 100%;
       }
     }
   }
